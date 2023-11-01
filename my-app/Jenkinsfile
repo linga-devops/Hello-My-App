@@ -2,6 +2,10 @@
 pipeline{
 
 agent any
+ tools { 
+      maven 'Maven_Home' 
+        }
+    
 stages{
     stage("Git Checkout"){
       steps{
