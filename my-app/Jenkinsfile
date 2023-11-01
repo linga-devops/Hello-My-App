@@ -19,7 +19,7 @@ steps{
 stage("deploy-dev")
 {
 steps{
-  sshagent(['tomcat-new]){
+  sshagent(['tomcat-new']){
    sh ===
     scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@172.31.19.241:/opt/tomcat/apache-tomcat-9.0.82/
     ssh ec2-user@172.31.19.241 /opt/tomcat/apache-tomcat-9.0.82/bin/shutdown.sh
