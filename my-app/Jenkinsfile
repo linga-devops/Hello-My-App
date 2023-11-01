@@ -2,10 +2,9 @@
 pipeline{
 
 agent any
-  tools { 
-      maven 'MAVEN_HOME' 
-      jdk 'JAVA_HOME' 
-    }
+ environment{
+   PATH = /opt/apache-maven-3.9.5/bin:$PATH
+}
     
 stages{
     stage("Git Checkout"){
